@@ -82,9 +82,9 @@ else
 fi
 
 ```
-`service`命令真正执行的脚本放在`/etc/init.d/`这个目录下，可以看到，这个目录下放置了很多常用服务的控制脚本，`grep`一下`mysql`，发现原来机器上脚本的文件名是`mysql.server`,修改命令名称，解决。  
+`service`命令真正执行的脚本放在`/etc/init.d/`这个目录下，可以看到，这个目录下放置了很多常用服务的控制脚本，`grep`一下`mysql`，发现原来机器上脚本的文件名是`mysql.server`,修改命令`service mysql.server start`，解决。  
 ## 扩展一下
-`/etc/init.d/`是啥？什么时候调用？怎样自定义一个服务自动起停，使用`service`命令操作？  
+`/etc/init.d/`是啥？有什么用？什么时候执行？ 
 ### linux启动过程  
 1. The BIOS or a bootloader (lilo, zlilo, grub, etc) loads Linux Kernel from disk to memory, with some parameters defined in the bootloader configuration. We can see this process watching the dots that appear in the screen. Kernel file stays in the /boot directory, and is accessed only at this moment.
 2. In memory, Kernel code starts to run, detecting a series of vital devices, disk partitions etc.
@@ -94,4 +94,25 @@ fi
 6. These scripts will continue the setup of system's minimal infrastructure, mounting other filesystems (according to /etc/fstab), activating swap space (virtual memory), etc.
 7. The last step, and most interesting for you, is the execution of the special script called /etc/rc.d/rc, which initializes the subsystems according to a directory structure under /etc/rc.d. The name rc comes from run commands.
 
-TODO 图片
+TODO 图片  
+重点关注`init`的执行过程，内核加载完成后，启动的第一个进程是`/sbin/init`，在此过程中，会读取`/etc/inittab`，确定运行级别，Linux允许为不同的场合，分配不同的开机启动程序，这就叫做"运行级别"（runlevel）。也就是说，启动时根据"运行级别"，确定要运行哪些程序。运行级别如下：  
+0. 系统停机状态，系统默认运行级别不能设为0，否则不能正常启动
+1. 单用户工作状态，root权限，用于系统维护，禁止远程登陆
+2. 多用户状态(没有NFS)
+3. 完全的多用户状态(有NFS)，登陆后进入控制台命令行模式
+4. 系统未使用，保留
+5. X11控制台，登陆后进入图形GUI模式
+6. 系统正常关闭并重启，默认运行级别不能设为6，否则不能正常启动
+
+我们的后台服务器运行级别是3，也就是会以3为参数，运行`/etc/rc.d/rc`，去执行`/etc/rc.d/rc3.d/`目录下的所有的rc启动脚本，`/etc/rc.d/rc3.d/`目录中的这些启动脚本实际上都是一些连接文件，而不是真正的rc启动脚本，真正的rc启动脚本实际上都是放在`/etc/rc.d/init.d/`目录下。  
+`/etc/rc.d/rc3.d/`下的链接文件都是以“S/K+数字+方法名”命名的，对于以S开头的启动脚本，将以`start`参数来运行，如果以`K`开头，则将首先以`stop`为参数停止这些已经启动了的守护进程，然后再重新运行。这样做是为了保证是当`init`改变运行级别时，所有相关的守护进程都将重启。  
+系统根据runlevel启动完`rcX.d`中的脚本之后,会调用`rc.local`脚本,如果你有一个脚本命令不论在3和5都想开机启动,那么就添加与此,免去`rc3.d`和`rc5.d`分别增加启动脚本工作量.  
+`init`执行完成所有的脚本后，就可以建立终端，用户登录了。
+
+### 参考
+[http://www.runoob.com/linux/linux-system-boot.html](http://www.runoob.com/linux/linux-system-boot.html)  
+[https://www.ibm.com/developerworks/cn/linux/l-linuxboot/index.html](https://www.ibm.com/developerworks/cn/linux/l-linuxboot/index.html)  
+[https://www.ibm.com/developerworks/cn/linux/kernel/startup/index.html](https://www.ibm.com/developerworks/cn/linux/kernel/startup/index.html)  
+[https://www.zhihu.com/question/20126189](https://www.zhihu.com/question/20126189)
+
+
