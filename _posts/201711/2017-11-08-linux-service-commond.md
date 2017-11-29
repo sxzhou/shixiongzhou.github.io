@@ -82,4 +82,16 @@ else
 fi
 
 ```
-`service`命令真正执行的脚本放在`/etc/init.d/`这个目录下，可以看到，这个目录下放置了很多常用服务的控制脚本，`grep`一下`mysql`，发现原来机器上脚本的文件名是`mysql.server`,修改命令名称，解决。
+`service`命令真正执行的脚本放在`/etc/init.d/`这个目录下，可以看到，这个目录下放置了很多常用服务的控制脚本，`grep`一下`mysql`，发现原来机器上脚本的文件名是`mysql.server`,修改命令名称，解决。  
+## 扩展一下
+`/etc/init.d/`是啥？什么时候调用？怎样自定义一个服务自动起停，使用`service`命令操作？  
+### linux启动过程  
+1. The BIOS or a bootloader (lilo, zlilo, grub, etc) loads Linux Kernel from disk to memory, with some parameters defined in the bootloader configuration. We can see this process watching the dots that appear in the screen. Kernel file stays in the /boot directory, and is accessed only at this moment.
+2. In memory, Kernel code starts to run, detecting a series of vital devices, disk partitions etc.
+3. On of the last things Kernel does is to mount the / (root) filesystem, that obrigatoriamente must contain the /etc, /sbin, /bin and /lib directories.
+4. Immediately behind, calls the program called init (/sbin/init) and passes the control to him.
+5. The init command will read his configuration file (/etc/inittab) which defines the system runlevel, and some Shell scripts to be run.
+6. These scripts will continue the setup of system's minimal infrastructure, mounting other filesystems (according to /etc/fstab), activating swap space (virtual memory), etc.
+7. The last step, and most interesting for you, is the execution of the special script called /etc/rc.d/rc, which initializes the subsystems according to a directory structure under /etc/rc.d. The name rc comes from run commands.
+
+TODO 图片
