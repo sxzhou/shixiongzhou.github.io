@@ -92,9 +92,9 @@ perm gen采用CMS收集需设置：-XX:+CMSClassUnloadingEnabled Hotspot V 1.6�
 TODO 图  
 #### 2. 可选组合  
 TODO 图  
-## 7. GC监测       
-
-1. jstat –gcutil [pid] [intervel] [count]   
+## 7. GC监测       
+如下方式可以查看gc状态  
+1. jstat –gcutil [pid] [intervel] [count]   
 2. -verbose:gc (可以辅助输出一些详细的GC信息);
 3. -XX:+PrintGCDetails (输出GC详细信息);
 4. -XX:+PrintGCApplicationStoppedTime (输出GC造成应用暂停的时间);  
