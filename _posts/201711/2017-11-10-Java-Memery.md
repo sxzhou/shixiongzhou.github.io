@@ -93,14 +93,15 @@ TODO 图
 #### 2. 可选组合  
 TODO 图  
 ## 7. GC监测       
-如下方式可以查看gc状态  
-1. jstat –gcutil [pid] [intervel] [count]   
-2. -verbose:gc (可以辅助输出一些详细的GC信息);
-3. -XX:+PrintGCDetails (输出GC详细信息);
-4. -XX:+PrintGCApplicationStoppedTime (输出GC造成应用暂停的时间);  
-5. -Xloggc:[file] (将GC信息输出到单独的文件中，建议都加上，这个消耗不大，而且对查问题和调优有很大的帮助。gc的日志拿下来后可使用GCLogViewer或gchisto进行分析);
-6. 图形化的情况下可直接用jvisualvm进行分析。
-7. 查看内存的消耗状况。长期消耗，可以直接dump，然后MAT(内存分析工具)查看即可；短期消耗，图形界面情况下，可使用jvisualvm的memory profiler或jprofiler；  
+
+如下方式可以查看gc状态：  
+* jstat –gcutil [pid] [intervel] [count]   
+* -verbose:gc (可以辅助输出一些详细的GC信息);
+* -XX:+PrintGCDetails (输出GC详细信息);
+* -XX:+PrintGCApplicationStoppedTime (输出GC造成应用暂停的时间);  
+* -Xloggc:[file] (将GC信息输出到单独的文件中，建议都加上，这个消耗不大，而且对查问题和调优有很大的帮助。gc的日志拿下来后可使用GCLogViewer或gchisto进行分析);
+* 图形化的情况下可直接用jvisualvm进行分析。
+* 查看内存的消耗状况。长期消耗，可以直接dump，然后MAT(内存分析工具)查看即可；短期消耗，图形界面情况下，可使用jvisualvm的memory profiler或jprofiler；  
 
 ## 系统调优方法  
 评估现状 -> 设定目标 -> 尝试调优 -> 衡量调优 -> 细微调整 -> 设定目标  
