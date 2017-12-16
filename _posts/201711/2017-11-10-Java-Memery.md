@@ -44,7 +44,7 @@ TODO 图
 ## 5. GC
 TODO图  
 #### 新生代GC
-1. 串行GC (Serial Copying)  
+  1. 串行GC (Serial Copying)  
 client模式下默认GC方式，也可通过-XX:+UseSerialGC来强制指定；默认情况下 eden、s0、s1的大小通过-XX:SurvivorRatio来控制，默认为8，含义 为eden:s0的比例，启动后可通过jmap –heap [pid]来查看。  
 默认情况下，仅在TLAB或eden上分配，只有两种情况下会在老生代分配:  
 (1) 需要分配的内存大小超过eden space大小；  
@@ -53,9 +53,9 @@ client模式下默认GC方式，也可通过-XX:+UseSerialGC来强制指定；�
 (1) 经历多次minor gc仍存活的对象，可通过以下参数来控制：以MaxTenuringThreshold值为准，默认为15;  
 (2) to space放不下的，直接放入老生代;  
 
-2. 并行GC (ParNew)  
+  2. 并行GC (ParNew)  
 CMS GC时默认采用，也可采用-XX:+UseParNewGC强制指定；垃圾回收的时候采用多线程的方式。  
-3. 并行回收GC(Parallel Scavenge)  
+  3. 并行回收GC(Parallel Scavenge)  
 server模式下默认的GC方式，也可采用-XX:+UseParallelGC强制指定；eden、s0、s1的大小可通过-XX:SurvivorRatio来控制，但默认情况下以-XX:InitialSurivivorRatio为准，此值默认为8，代表的为新生代大小:s0，这点要特别注意。  
 默认情况下，当TLAB、eden上分配都失败时，判断需要分配的内存大小是否 >= eden space的一半大小，如是就直接在老生代上分配；  
 默认情况下的垃圾回收规则:  
@@ -64,14 +64,15 @@ server模式下默认的GC方式，也可采用-XX:+UseParallelGC强制指定；
 默认情况下的新生代对象晋升到老生代的规则:  
 (1) 经历多次minor gc仍存活的对象，可通过以下参数来控制：AlwaysTenure，默认false，表示只要minor GC时存活，就晋升到老生代；NeverTenure，默认false，表示永不晋升到老生代；上面两个都没设置的情冴下，如UseAdaptiveSizePolicy，启动时以InitialTenuringThreshold值作为存活次数的阈值，在每次ps gc后会动态调整，如不使用UseAdaptiveSizePolicy，则以MaxTenuringThreshold为准;  
 (2) to space放不下的，直接放入老生代。在回收后，如UseAdaptiveSizePolicy，PS GC会根据运行状态动态调整eden、to以及TenuringThreshold的大小。如果不希望动态调整可设置-XX:-UseAdaptiveSizePolicy。如希望跟踪每次的变化情况，可在启动参数上增加:PrintAdaptiveSizePolicy。  
+
 #### 老年代GC  
-1. 串行GC(Serial Copying)  
-client方式下默认GC方式，可通过-XX:+UseSerialGC强制指定。 触发机制汇总:  
-(1) old gen空间不足;  
-(2) perm gen空间不足;  
-(3) minor gc时的悲观策略;  
-(4) minor GC后在eden上分配内存仍然失败;  
-(5) 执行heap dump时;  
+  1. 串行GC(Serial Copying)  
+    client方式下默认GC方式，可通过-XX:+UseSerialGC强制指定。 触发机制汇总:  
+    (1) old gen空间不足;  
+  (2) perm gen空间不足;  
+  (3) minor gc时的悲观策略;  
+  (4) minor GC后在eden上分配内存仍然失败;  
+  (5) 执行heap dump时;  
 (6) 外部调用System.gc，可通过-XX:+DisableExplicitGC来禁止;  
 
 2. 并行回收GC(Parallel Scavenge)  
