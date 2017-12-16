@@ -88,11 +88,13 @@ Hotspot V 1.6中默认为65%，可通过PrintCMSInitiationStatistics（此参数
 perm gen采用CMS收集需设置：-XX:+CMSClassUnloadingEnabled Hotspot V 1.6中默认为65%；可通过CMSInitiatingPermOccupancyFraction来强制指定，同样，它是根据如下公式计算出来的：((100 - MinHeapFreeRatio) +(double)(CMSTriggerPermRatio* MinHeapFreeRatio) / 100.0)/ 100.0; 其中，MinHeapFreeRatio40 CMSTriggerPermRatio默认值是80。  
 (3) Hotspot根据成本计算决定是否需要执行CMS GC；可通过-XX:+UseCMSInitiatingOccupancyOnly来去掉这个动态执行的策略。  
 (4) 外部调用了System.gc，且设置了ExplicitGCInvokesConcurrent；需要注意，在hotspot 6中，在这种情况下如应用同时使用了NIO，可能会出现bug。  
+
 ## 6. GC组合  
-#### 1. 默认组合  
+**默认组合**  
 TODO 图  
-#### 2. 可选组合  
+**可选组合**  
 TODO 图  
+
 ## 7. GC监测       
 
 如下方式可以查看gc状态：  
@@ -104,7 +106,7 @@ TODO 图
 * 图形化的情况下可直接用jvisualvm进行分析。
 * 查看内存的消耗状况。长期消耗，可以直接dump，然后MAT(内存分析工具)查看即可；短期消耗，图形界面情况下，可使用jvisualvm的memory profiler或jprofiler；  
 
-## 系统调优方法  
+## 8. 系统调优方法  
 评估现状 -> 设定目标 -> 尝试调优 -> 衡量调优 -> 细微调整 -> 设定目标  
 常见问题：  
 * 怎样降低Full GC的执行频率？  
