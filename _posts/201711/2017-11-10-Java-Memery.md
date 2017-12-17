@@ -8,7 +8,25 @@ author: "sxzhou"
 ---
 
 ## 1. Java虚拟机运行时的数据区
-![](http://images.cnblogs.com/cnblogs_com/Cratical/201208/201208212311249241.png)
+![](http://images.cnblogs.com/cnblogs_com/Cratical/201208/201208212311249241.png)   
+ 
+进一步看看各个区域的内容:   
+![](http://7xrgh9.com1.z0.glb.clouddn.com/16-10-18/10813208.jpg) 
+**程序计数器(program counter register)**  
+是一块较小的内存空间，是当前线程所执行的字节码的行号指示器。如果线程正在执行一个java方法，这个计数器记录的是正在执行的虚拟机字节码指令的地址；如果是`Naive`方法，则计数器为空；这个区域不会出现`OutOfMemoryError`异常。java虚拟机多线程是使用线程轮流切换并分配处理执行时间的方式来实现的，在任何一个确定的时刻，一个处理器都只会执行一条线程中的指令。为了线程切换后能够恢复到正确的执行位置，每条线程都需要一套独立的线程计数器，这些计数器之间相互独立，独立存储，这个内存区域为“线程私有”。  
+  
+**虚拟机栈(VM stack)**  
+java虚拟机栈也是线程私有，与线程的生命周期一致，在执行每个方法都会创建一个Stack Frame。每一个方法从开始执行到结束，对应一个Stack Frame在虚拟机值栈中从入栈和出栈的过程。如果线程请求的栈深度大于虚拟机所允许的深度，就会出现`StackOverFlowException`。如果允许动态扩展，在扩展的过程中，如果无法申请到足够的内存，则会抛出`OutOfMemoryException`异常。  
+
+**本地方法栈(native method stack)**  
+和java虚拟机栈的作用类似，不同点在本地方法栈主要是为虚拟机使用到的`Native`方法提供服务，本地方法栈也会抛出`StackOverFlowException`和`OutOfMemoryException`异常。  
+
+**堆(heap)**  
+堆是java虚拟机中内存中最大的一块，被所有线程共享的一块内存区域，在虚拟机创建时创建。作用就是存放对象实例，所有的对象的实例都需要在这里分配内存。几乎所有的对象实例和对象数组都需要在堆上分配。是java虚拟机内存回收的管理的重要区域，因此也被称为“GC”堆，可以被分为：新生代和老年代；`Eden`空间、From Survivor空间、To Survivor空间。如果堆中没有内存完成实例分配，并且堆也无法扩展时，则抛出OutOfMemoryException异常。  
+
+**方法区(method area)**  
+方法区和java堆一样，是各个线程共享的内存区域，用于存储被虚拟机加载的类信息、常量、静态变量、即时编译器编译的代码等数据。通常被开发人员成为“永久带”。这个区域的内存回收的目标就是针对常亮池的回收和对类型的卸载，也是较为难处理的部分。  
+
 ## 2. 常用内存参数调节
 *`-Xms`*  
 初始堆大小，默认为物理内存的1/64(<1GB);  
@@ -131,4 +149,9 @@ perm gen采用CMS收集需设置：`-XX:+CMSClassUnloadingEnabled`, Hotspot V 1.
 
 *QPS每秒查询率*：是对一个特定的查询服务器在规定时间内所处理流量多少的衡量标准。在因特网上，作为域名服务器的机器性能经常用每秒查询率来衡量。对应fetches/sec，即每秒的响应请求数，也即是最大吞吐能力。   *TPS(Transaction Per Second)*：每秒钟系统能够处理的交易或事务的数量。 尝试调优：
 
-注意Java RMI的定时GC触发机制，可通过：`-XX:+DisableExplicitGC`来禁止或通过 `-Dsun.rmi.dgc.server.gcInterval=3600000`来控制触发的时间。
+注意Java RMI的定时GC触发机制，可通过：`-XX:+DisableExplicitGC`来禁止或通过 `-Dsun.rmi.dgc.server.gcInterval=3600000`来控制触发的时间。  
+
+##参考  
+[http://blog.csdn.net/zjf280441589/article/details/53437703](http://blog.csdn.net/zjf280441589/article/details/53437703)  
+[https://www.cnblogs.com/daemonox/p/4419579.html](https://www.cnblogs.com/daemonox/p/4419579.html)  
+[http://www.blogjava.net/jjshcc/archive/2014/03/05/410655.html](http://www.blogjava.net/jjshcc/archive/2014/03/05/410655.html)
