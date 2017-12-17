@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "non-static inner class使用lombok注解@Builder编译失败分析"
+title:  "非静态内部类使用lombok注解@Builder编译失败分析"
 date:   2017-12-13 09:09:22
 categories: java
 tags: java
