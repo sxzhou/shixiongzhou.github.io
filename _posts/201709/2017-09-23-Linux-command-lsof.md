@@ -3,7 +3,7 @@ layout: post
 title:  "linux运维常用命令-lsof"
 date:   2017-09-23 23:03:03
 categories: linux
-tags: linux
+tags: tools
 author: "sxzhou"
 ---
 

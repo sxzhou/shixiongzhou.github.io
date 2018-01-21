@@ -3,7 +3,7 @@ layout: post
 title:  “springboot配置多数据源的坑”
 date:   2017-08-25 23:00:00
 categories: java
-tags: java
+tags: spring
 author: "sxzhou"
 ---
 https://stackoverflow.com/questions/44757388/why-qualifier-not-work/44776477?noredirect=1#comment76540296_44776477  

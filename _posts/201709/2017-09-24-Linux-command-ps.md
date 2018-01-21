@@ -3,7 +3,7 @@ layout: post
 title:  "linux运维常用命令-ps"
 date:   2017-09-24 11:36:43
 categories: linux
-tags: linux
+tags: tools
 author: "sxzhou"
 ---
 
