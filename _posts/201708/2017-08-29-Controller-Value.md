@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "java List"
+title:  "controller中使用value"
 date:   2017-08-25 23:00:34
-categories: code
+categories: java
 tags: java
 author: "sxzhou"
 ---
