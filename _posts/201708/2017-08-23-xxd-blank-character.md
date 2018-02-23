@@ -11,7 +11,7 @@ author: "sxzhou"
 简化复现一下，原始文件invisible.txt:  
 ```sql
 select 
-orderId, price
+order_id, price
 from orders
 where 
 id = 12345
@@ -20,10 +20,10 @@ id = 12345
 `xxd invisible.txt`  
 输出:  
 ```
-00000000: 7365 6c65 6374 200a 6f72 6465 7249 642c  select .orderId,
-00000010: 2070 7269 6365 0a66 726f 6d20 6f72 6465   price.from orde
-00000020: 7273 0a77 6865 7265 c2a0 0a69 6420 3d20  rs.where...id = 
-00000030: 3132 3334 350a                           12345. 
+00000000: 7365 6c65 6374 200a 6f72 6465 725f 6964  select .order_id
+00000010: 2c20 7072 6963 650a 6672 6f6d 206f 7264  , price.from ord
+00000020: 6572 730a 7768 6572 65c2 a00a 6964 203d  ers.where...id =
+00000030: 2031 3233 3435 0a                         12345.
 ```
 可以看到`where`后面除了换行符`0a`前面还有不可见字符，查询utf-8字符编码表:  
 [http://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=0x](http://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=0x)  
