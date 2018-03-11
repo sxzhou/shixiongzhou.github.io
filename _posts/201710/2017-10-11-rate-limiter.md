@@ -3,7 +3,7 @@ layout: post
 title:  "[译]guava RateLimiter原理解析"
 date:   2017-10-11 23:00:00
 categories: java
-tags: guava
+tags: translation
 author: "sxzhou"
 ---
 
