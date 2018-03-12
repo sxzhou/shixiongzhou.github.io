@@ -11,11 +11,16 @@ author: "sxzhou"
 
 lambda表达式是一个匿名函数，它基于数学中的λ演算得名，直接对应于其中的lambda抽象(lambda abstraction)，是一个匿名函数，即没有函数名的函数。
 要理解lambda表达式，首先要了解的是函数式接口（functional interface）。简单来说，函数式接口是只包含一个抽象方法的接口。比如Java标准库中的java.lang.Runnable和java.util.Comparator都是典型的函数式接口。对于函数式接口，除了可以使用Java中标准的方法来创建实现对象之外，还可以使用lambda表达式来创建实现对象。这可以在很大程度上简化代码的实现。在使用lambda表达式时，只需要提供形式参数和方法体。由于函数式接口只有一个抽象方法，所以通过lambda表达式声明的方法体就肯定是这个唯一的抽象方法的实现，而且形式参数的类型可以根据方法的类型声明进行自动推断。  
+
+
+
 具体关于函数式编程的思想，Java8对lambda表达式的支持，可以参考一下博客:  
 [http://www.ruanyifeng.com/blog/2012/04/functional_programming.html](http://www.ruanyifeng.com/blog/2012/04/functional_programming.html)  
 [https://www.ibm.com/developerworks/cn/java/j-ft20/index.html](https://www.ibm.com/developerworks/cn/java/j-ft20/index.html)  
 [http://www.infoq.com/cn/articles/Java-se-8-lambda](http://www.infoq.com/cn/articles/Java-se-8-lambda)  
 [http://www.importnew.com/16436.html](http://www.importnew.com/16436.html)  
+
+
 Lambda表达式的基本语法:  
 >(parameters) -> expression  
 or  

@@ -2,8 +2,8 @@
 layout: post
 title:  "LongAdder与AtomicLong对比"
 date:   2018-01-03 23:13:34
-categories: java
-tags: java
+categories: mybatis
+tags: mybatis
 author: "sxzhou"
 ---  
 
