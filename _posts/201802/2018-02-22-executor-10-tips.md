@@ -90,3 +90,44 @@ division.get();
 有趣的是，甚至连`Spring`框架使用注解`@Async`也有这个bug，参见[SPR-8995](https://jira.spring.io/browse/SPR-8995)和[SPR-12090](https://jira.spring.io/browse/SPR-12090).  
 
 #### 7. 监控队列中任务的等待时间  
+一方面我们需要监控等待队列长度，但有时候，对于某一个任务，我们更关心从提交任务到任务实际执行之间等待了多长时间。这个时间间隔我们更希望能趋近于0(如果提交任务时有空闲的线程)，但很多时候这个时间会增加，因为需要在等待队列中缓冲一会儿。如果线程池没有设置固定的线程数，那么，此时就会创建新的线程，这个过程也需要一定的时间。为了能准确地监控到这个指标，如下，对原始的`ExecutorService`做一层封装。  
+```java
+public class WaitTimeMonitoringExecutorService implements ExecutorService {
+private final ExecutorService target;
+public WaitTimeMonitoringExecutorService(ExecutorService target) {
+this.target = target;
+}
+@Override
+public <T> Future<T> submit(Callable<T> task) {
+final long startTime = System.currentTimeMillis();
+return target.submit(() -> {
+final long queueDuration = System.currentTimeMillis() - startTime;
+log.debug("Task {} spent {}ms in queue", task, queueDuration);
+return task.call();
+}
+);
+}
+@Override
+public <T> Future<T> submit(Runnable task, T result) {
+return submit(() -> {
+task.run();
+return result;
+});
+}
+@Override
+public Future<?> submit(Runnable task) {
+return submit(new Callable<Void>() {
+@Override
+public Void call() throws Exception {
+task.run();
+return null;
+}
+});
+}
+//...
+}
+```  
+这个类没有完全实现，但从以上代码，应该可以看出监控实现的原理。一个任务一旦提交，立刻开始计时，当任务开始执行时，停止计时，那么，这个时间段就是任务等待的时间。注意，不要被代码迷惑了，看起来`startTime`和`queueDuration`之间间隔这么短，时间上记录开始和结束是在不同的线程，相隔了数毫秒甚至几秒。执行结果如下：  
+>Task com.nurkiewicz.MyTask@7c7f3894 spent 9883ms in queue
+
+#### 8. 保存客户端调用堆栈信息  
