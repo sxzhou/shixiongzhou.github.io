@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Mysql中TINYINT(1)自动映射成Boolean解决方法xxx"
-date:   2018-01-28 00:10:11
+title:  "springmvc在controller中使用@Value注入属性失败分析"
+date:   2018-02-02 00:10:11
 categories: mysql
 tags: mysql
 author: "sxzhou"
