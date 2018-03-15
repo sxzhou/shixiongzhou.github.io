@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "springMVC在Controller中使用@Value注入属性失败原因分析"
+title:  "在Controller中使用@Value注入属性失败原因分析"
 date:   2018-02-02 23:00:34
 categories: spring
 tags: spring
