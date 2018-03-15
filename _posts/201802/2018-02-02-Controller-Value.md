@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "在Controller中使用@Value注入属性失败原因分析"
-date:   2018-02-02 23:00:34
-categories: spring
-tags: spring
-author: "sxzhou"　　
----　　
-
+title:  "Mysql中TINYINT(1)自动映射成Boolean解决方法xxx"
+date:   2018-01-28 00:10:11
+categories: mysql
+tags: mysql
+author: "sxzhou"
+---  
 这个问题的关键在于：  
 * ApplicationContext和WebApplicationContext是什么关系？
 * property文件放在哪里？是谁加载的？
