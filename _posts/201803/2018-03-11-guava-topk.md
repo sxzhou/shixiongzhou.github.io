@@ -53,7 +53,7 @@ public <E extends T> List<E> leastOf(Iterator<E> elements, int k) {
 
       buffer[bufferSize++] = e;
 ```
-从`k+1`个元素开始，更加`threshold`的定义可以知道，如果大于`threshold`，肯定不是topK的，直接抛弃。  
+从`k+1`个元素开始，根据`threshold`的定义可以知道，如果大于`threshold`，肯定不是topK的，直接抛弃。  
 ```java
 if (bufferSize == bufferCap) {
         // We apply the quickselect algorithm to partition about the median,
