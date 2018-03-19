@@ -52,5 +52,6 @@ lsof -i -U //显示所有打开的端口和UNIX domain文件<br>
 lsof -i UDP@[url]www.akadia.com:123 //显示那些进程打开了到www.akadia.com的UDP的123(ntp)端口的链接<br>
 lsof -i tcp@ohaha.ks.edu.tw:ftp -r //不断查看目前ftp连接的情况(-r，lsof会永远不断的执行，直到收到中断信号,+r，lsof会一直执行，直到没有档案被显示,缺省是15s刷新)<br>
 lsof -i tcp@ohaha.ks.edu.tw:ftp -n //lsof -n 不将IP转换为hostname，缺省是不加上-n参数<br>
----
+
 *注：ulimit -a：一个进程打开文件句柄（socket）数量限制*
+
