@@ -2,7 +2,7 @@
 layout: post
 title:  "Mysql中TINYINT(1)自动映射成Boolean解决方法"
 date:   2018-01-28 00:10:11
-categories: mysql
+categories: article
 tags: mysql
 author: "sxzhou"
 ---  

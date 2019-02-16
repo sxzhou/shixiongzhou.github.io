@@ -2,8 +2,8 @@
 layout: post
 title:  "springmvc在controller中使用@Value注入属性失败分析"
 date:   2018-02-02 00:10:11
-categories: spring
-tags: spring
+categories: article
+tags: spring java springmvc
 author: "sxzhou"
 ---  
 这个问题的关键在于：  
