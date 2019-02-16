@@ -2,8 +2,8 @@
 layout: post
 title:  "Mysql(InnoDB)死锁相关(updating)"
 date:   2017-10-20 13:34:11
-categories: mysql
-tags: mysql
+categories: article
+tags: mysql InnoDB
 author: "sxzhou"
 ---
 

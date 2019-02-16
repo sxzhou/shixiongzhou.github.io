@@ -2,8 +2,8 @@
 layout: post
 title:  "linux远程文件传输的几种方式"
 date:   2017-09-24 11:36:43
-categories: linux
-tags: tools
+categories: article
+tags: linux shell
 author: "sxzhou"
 ---
 

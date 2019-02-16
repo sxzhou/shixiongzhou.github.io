@@ -2,8 +2,8 @@
 layout: post
 title:  "通过shell实现中文urlencode和urldecode"
 date:   2017-10-09 14:10:22
-categories: linux
-tags: linux
+categories: article
+tags: linux shell
 author: "sxzhou"
 ---
 

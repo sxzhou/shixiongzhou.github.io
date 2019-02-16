@@ -2,8 +2,8 @@
 layout: post
 title:  "HttpClient连接数参数解析"
 date:   2018-02-07 13:11:23
-categories: java
-tags: web
+categories: article
+tags: web HttpClient
 author: "sxzhou"
 ---  
 节前高峰，被百度导了一波流量过来，qps突然升高了1000+，调用第三方的HttpClient抛异常，获取不到连接，赶紧调整了限流参数，查看连接池参数配置，这个并发数应该可以支持的啊，为什么会崩呢？查看了参数说明，果然，使用了公司提供的默认配置，最大连接数确实不够。之前对连接数参数的理解也是有误的。  

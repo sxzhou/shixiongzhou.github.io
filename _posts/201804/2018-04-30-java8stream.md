@@ -2,8 +2,8 @@
 layout: post
 title:  "[转]Java8新特性之流式数据处理"
 date:   2018-04-30 11:00:51
-categories: java
-tags: java8
+categories: article
+tags: java8 lambda
 author: "sxzhou"
 ---  
 [原文](https://www.cnblogs.com/shenlanzhizun/p/6027042.html)

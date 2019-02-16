@@ -2,8 +2,8 @@
 layout: post
 title:  "linux运维常用命令-top"
 date:   2017-09-25 23:30:00
-categories: linux
-tags: tools
+categories: article
+tags: linux shell
 author: "sxzhou"
 ---
 

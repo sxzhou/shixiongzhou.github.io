@@ -2,7 +2,7 @@
 layout: post
 title:  "java集合框架与guava的扩展增强"
 date:   2017-12-31 14:55:13
-categories: java
+categories: article
 tags: guava
 author: "sxzhou"
 ---

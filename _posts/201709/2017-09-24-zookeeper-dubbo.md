@@ -2,8 +2,8 @@
 layout: post
 title:  "zookeeper在dubbo中的作用"
 date:   2017-09-24 23:11:11
-categories: java
-tags: zookeeper
+categories: article
+tags: zookeeper dubbo
 author: "sxzhou"
 ---  
 

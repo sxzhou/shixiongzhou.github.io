@@ -2,8 +2,8 @@
 layout: post
 title:  "guava中topK算法实现解析"
 date:   2018-03-11 11:00:51
-categories: algorithm
-tags: algorithm
+categories: article
+tags: algorithm guava
 author: "sxzhou"
 ---  
 对于topK问题，我们首先想到的是通过最小(大)堆实现，jdk也提供了相关的实现`PriorityQueue`，可以很方便地实现，建堆时间复杂度O(n)，实现原理不赘述，同时guava也提供了相关的工具，在`Ordering`中提供了`leastOf`和对应的`greatestof`方法，获取集合中的最小或最大的k个元素，实现原理和优先队列不一样。可以看到guava的设计者更注重工程实践的需要。  

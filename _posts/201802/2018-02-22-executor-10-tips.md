@@ -3,7 +3,7 @@ layout: post
 title:  "[译]使用ExecutorService的10个技巧"
 date:   2018-02-22 23:09:23
 categories: translation
-tags: concurrency
+tags: thread java
 author: "sxzhou"
 ---  
 

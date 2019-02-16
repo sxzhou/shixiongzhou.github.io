@@ -2,7 +2,7 @@
 layout: post
 title:  "Java常见问题排查(整理自毕玄ppt)"
 date:   2017-11-13 09:23:56
-categories: java
+categories: article
 tags: java
 author: "sxzhou"
 ---

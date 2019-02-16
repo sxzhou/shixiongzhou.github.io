@@ -2,7 +2,7 @@
 layout: post
 title:  "dubbo配置覆盖策略"
 date:   2017-12-30 12:19:52
-categories: java
+categories: article
 tags: dubbo
 author: "sxzhou"
 ---

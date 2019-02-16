@@ -2,8 +2,8 @@
 layout: post
 title:  "mybatis使用OGNL判断0和空字符串的一点分析"
 date:   2018-01-03 23:13:34
-categories: mybatis
-tags: mybatis
+categories: article
+tags: mybatis OGNL
 author: "sxzhou"
 ---  
 

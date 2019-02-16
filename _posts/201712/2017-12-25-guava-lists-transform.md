@@ -2,7 +2,7 @@
 layout: post
 title:  "guava中Lists.transform()执行过程分析"
 date:   2017-12-13 09:09:22
-categories: java
+categories: article
 tags: guava
 author: "sxzhou"
 ---

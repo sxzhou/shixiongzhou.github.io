@@ -2,8 +2,8 @@
 layout: post
 title:  "Mysql(InnoDB)表空间存储结构"
 date:   2017-09-28 23:14:45
-categories: mysql
-tags: mysql
+categories: article
+tags: mysql InnoDB
 author: "sxzhou"
 ---  
 

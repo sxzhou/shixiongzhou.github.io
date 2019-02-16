@@ -2,8 +2,8 @@
 layout: post
 title:  "linux运维常用命令-lsof"
 date:   2017-09-23 23:03:03
-categories: linux
-tags: tools
+categories: article
+tags: linux shell
 author: "sxzhou"
 ---
 

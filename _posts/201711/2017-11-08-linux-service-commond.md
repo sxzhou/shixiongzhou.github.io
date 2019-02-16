@@ -2,7 +2,7 @@
 layout: post
 title:  "linux命令service xxx start是如何工作的"
 date:   2017-11-08 23:08:09
-categories: linux
+categories: article
 tags: linux
 author: "sxzhou"
 ---

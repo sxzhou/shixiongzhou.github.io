@@ -2,8 +2,8 @@
 layout: post
 title:  "使用lambda表达式简化代码"
 date:   2018-02-11 13:11:23
-categories: java
-tags: java8
+categories: article
+tags: java8 java lambda
 author: "sxzhou"
 ---  
 
