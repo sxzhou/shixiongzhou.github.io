@@ -2,67 +2,37 @@
   <span class="fa-stack fa-lg">
     <i class="fa fa-circle fa-stack-2x"></i>
     {% if post.tags contains 'linux' %}
-      <i class="fa fa-terminal fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'editor' %}
-      <i class="fa fa-edit fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'refactoring' %}
-      <i class="fa fa-leaf fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'testing' %}
-      <i class="fa fa-magic fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'git' %}
-      <i class="fa fa-github fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'mac' %}
-      <i class="fa fa-apple fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'mybatis' %}
-      <i class="fa fa-adn fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'metaprogramming' %}
-      <i class="fa fa-flask fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'helper' %}
-      <i class="fa fa-cutlery fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'java' %}
-      <i class="fa fa-rocket fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'css' %}
-      <i class="fa fa-css3 fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'web' %}
-      <i class="fa fa-html5 fa-stack-1x text-white"></i>
+      <i class="fa fa-linux fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'shell' %}
+      <i class="fa fa-linux fa-stack-1x text-white"></i>
     {% elsif post.tags contains 'tools' %}
-      <i class="fa fa-lightbulb-o fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'rake' %}
-      <i class="fa fa-anchor fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'concurrency' %}
-      <i class="fa fa-archive fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'time' %}
-      <i class="fa fa-clock-o fa-stack-1x text-white"></i>
+      <i class="fa fa-wrench fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'java' %}
+      <i class="fa fa-terminal fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'java8' %}
+      <i class="fa fa-terminal fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'git' %}
+      <i class="fa fa-git fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'mysql' %}
+      <i class="fa fa-database fa-stack-1x text-white"></i>
     {% elsif post.tags contains 'algorithm' %}
       <i class="fa fa-trophy fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'caching' %}
-      <i class="fa fa-truck fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'mysql' %}
-      <i class="fa fa-dropbox fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'regexp' %}
-      <i class="fa fa-magnet fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'scrum' %}
-      <i class="fa fa-cutlery fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'learningnote' %}
-      <i class="fa fa-trophy fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'functional_programming' %}
-      <i class="fa fa-facebook-square fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'enumerable' %}
-      <i class="fa fa-ticket fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'go' %}
+      <i class="fa fa-google fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'thread' %}
+      <i class="fa fa-rocket fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'coroutine' %}
+      <i class="fa fa-rocket fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'web' %}
+      <i class="fa fa-chrome fa-stack-1x text-white"></i>
     {% elsif post.tags contains 'spring' %}
-      <i class="fa fa-upload fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'debug' %}
-      <i class="fa fa-bug fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'rails5' %}
-      <i class="fa fa-thumbs-up fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'virtual_machine' %}
-      <i class="fa fa-inbox fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'uml' %}
-      <i class="fa fa-cogs fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'environment' %}
-      <i class="fa fa-asterisk fa-stack-1x text-white"></i>
-    {% elsif post.tags contains 'proxy' %}
-      <i class="fa fa-cloud-upload fa-stack-1x text-white"></i>
+      <i class="fa fa-server fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'springboot' %}
+      <i class="fa fa-server fa-stack-1x text-white"></i>
+    {% elsif post.tags contains 'mybatis' %}
+      <i class="fa fa-server fa-stack-1x text-white"></i>
+    {% else %}
+      <i class="fa fa-file-code-o fa-stack-1x text-white"></i>
     {% endif %}
   </span>
 </div>

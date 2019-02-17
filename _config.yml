@@ -1,5 +1,5 @@
 # Site settings
-title: "sxzhou's space"
+title: "sxzhou's notebook"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://sxzhou.github.io" # the base hostname & protocol for your site
 github_username: sxzhou
@@ -16,4 +16,4 @@ markdown: kramdown
 redcarpet:
   extensions: ['fenced_code_blocks', 'tables']
 
-paginate: 25
+paginate: 20

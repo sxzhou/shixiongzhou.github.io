@@ -3,7 +3,7 @@ layout: post
 title:  "JVM内存管理相关整理"
 date:   2017-11-10 12:11:12
 categories: article
-tags: jvm
+tags: java jvm
 author: "sxzhou"
 ---
 
