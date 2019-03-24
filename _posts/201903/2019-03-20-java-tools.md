@@ -32,7 +32,8 @@ cat f.txt | grep -c 'SHOPBASE'
 ```
 *awk*  
 
-1. 基础命令
+1. 基础命令    
+
 ```bash
 awk '{print $4,$6}' f.txt
 awk '{print NR,$0}' f.txt cpf.txt
@@ -40,7 +41,6 @@ awk '{print FNR,$0}' f.txt cpf.txt
 awk '{print FNR,FILENAME,$0}' f.txt cpf.txt
 awk '{print FILENAME,"NR="NR,"FNR="FNR,"$"NF"="$NF}' f.txt cpf.txt
 echo 1:2:3:4 | awk -F: '{print $1,$2,$3,$4}'
-
 ```
 
 2. 匹配
