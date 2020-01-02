@@ -6,3 +6,4 @@ categories: article
 tags: java8
 author: "sxzhou"
 ---
+https://stackoverflow.com/questions/52287717/how-to-specify-forkjoinpool-for-java-8-parallel-stream
