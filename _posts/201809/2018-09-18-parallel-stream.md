@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[译]那些场景适合使用parallel stream -- Doug Lea"
+title:  "When to use parallel streams -- Doug Lea"
 date:   2018-09-18 11:00:51
 categories: translation
 tags: java
