@@ -13,7 +13,6 @@ author: "sxzhou"
 
 ![https://s2.ax1x.com/2020/01/06/lyDMHs.jpg](https://s2.ax1x.com/2020/01/06/lyDMHs.jpg)   
 
-
 从逻辑上看，所有数据都存储在表空间(`Tablespace`)，物理上就是idb文件。   
 表空间又可以逐级细分为：段(`Segment`)，区(`Extent`)，页(`Page`)，行(`Row`)。   
 
@@ -31,8 +30,10 @@ InnoDB是以行为基础管理数据的。也就是数据按行存放的。每�
 
 ## 索引结构  
 InnoDB是索引组织表，主键索引B+树的叶子节点存储数据，非主键索引B+树叶子节点存储主键，因此通过非主键索引查询，需要先找到主键，然后回表通过主键索引查到数据。   
-宏观来看主键索引与非主键索引：
+宏观来看主键索引与非主键索引：   
+
 ![https://s2.ax1x.com/2020/01/06/ly2azq.png](https://s2.ax1x.com/2020/01/06/ly2azq.png)   
 
-微观来看主键索引树的page： 
+微观来看主键索引树的page：    
+
 ![https://s2.ax1x.com/2020/01/06/ly24OK.png](https://s2.ax1x.com/2020/01/06/ly24OK.png)
