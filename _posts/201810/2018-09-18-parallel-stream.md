@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "When to use parallel streams -- Doug Lea"
-date:   2018-09-18 11:00:51
+date:   2018-10-18 11:00:51
 categories: translation
 tags: java
 author: "sxzhou"
