@@ -13,6 +13,6 @@ author: "sxzhou"
 
 [Why you can have millions of Goroutines but only thousands of Java Threads](https://rcoh.me/posts/why-you-can-have-a-million-go-routines-but-only-1000-java-threads/)  
 
-[进程、线程、协程与goruntine](https://zhuanlan.zhihu.com/p/27245377)  
+[进程、线程、协程与goroutine](https://zhuanlan.zhihu.com/p/27245377)  
 
 [为什么 Java 坚持多线程不选择协程？](https://www.zhihu.com/question/332042250/answer/734115120)
