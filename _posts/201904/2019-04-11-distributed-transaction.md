@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "微服务中事务处理概览"
+title:  "[译]微服务环境下事务处理概览"
 date:   2019-04-11 19:01:00
-categories: article
-tags: XA fescar
+categories: translation
+tags: 
 author: "sxzhou"
 ---
+[https://www.baeldung.com/transactions-across-microservices](https://www.baeldung.com/transactions-across-microservices)   
+
 
 ## 1. 简介 
 在本文中，我们会讨论在微服务环境下实现事务的不同方式。同时，我们也会探讨在分布式场景下，为了解决这个问题，除了事务之外的一些其他可选方案。 

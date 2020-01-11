@@ -13,9 +13,7 @@ author: "sxzhou"
 sql生成工具比较多，推荐`jOOQ`提供的sql builder，`jOOQ`现在很活跃，官方文档丰富，而且作者及公司员工常年关注`stackoverflow`上的相关问题，项目中碰到问题问过几次，很快就会回复：   
 
 [https://stackoverflow.com/questions/57591155/how-to-generate-sql-from-template-with-order-by-parameter-using-jooq](https://stackoverflow.com/questions/57591155/how-to-generate-sql-from-template-with-order-by-parameter-using-jooq)  
-
 [https://stackoverflow.com/questions/57601416/how-to-modify-plain-sql-text-with-jooq-such-as-appending-order-by-limit-offset-c](https://stackoverflow.com/questions/57601416/how-to-modify-plain-sql-text-with-jooq-such-as-appending-order-by-limit-offset-c)  
-
 [https://stackoverflow.com/questions/57707116/how-to-parser-sql-string-with-self-defined-functions-using-jooq](https://stackoverflow.com/questions/57707116/how-to-parser-sql-string-with-self-defined-functions-using-jooq)   
 
 `jOOQ`提供的sql builder非常好用，但是sql parser还不是很完善，最初以为sql parser的使用应该不会太多，做些语法校验，加limit等，但随着项目深入发现一个好的sql parser是必须的。   
