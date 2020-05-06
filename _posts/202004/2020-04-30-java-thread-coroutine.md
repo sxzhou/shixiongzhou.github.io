@@ -42,8 +42,8 @@ author: "sxzhou"
 Java目前没有协程的语言层面的实现，但是有相关的开源框架实现类似的目的，包括Quasar、Project Loom、阿里巴巴开源的AJDK，基本原理都是都是通过字节码操作将同步调用改为异步调用。  
 [https://github.com/puniverse/quasar](https://github.com/puniverse/quasar)  
 [https://openjdk.java.net/projects/loom/](https://openjdk.java.net/projects/loom/)  
-[Java 异步编程：从 Future 到 Project Loom](https://www.jianshu.com/p/5db701a764cb)  
+[Java 异步编程：从 Future 到 Project Loom](https://www.jianshu.com/p/5db701a764cb)（这篇文章总结不错，从Future模式到反应式编程再到Project Loom各种方案的优缺点。）  
 
 但是这些项目并没有广泛推广使用和验证，然而兄弟语言Kotlin从语言层面支持了Coroutine，值得了解下。  
-[KotlinConf 2017 - Introduction to Coroutines by Roman Elizarov](https://www.youtube.com/watch?v=_hfBv0a09Jc)
+[KotlinConf 2017 - Introduction to Coroutines by Roman Elizarov](https://www.youtube.com/watch?v=_hfBv0a09Jc)  
 [了解Kotlin协程实现原理这篇就够了](https://ethanhua.github.io/2018/12/24/kotlin_coroutines/)
