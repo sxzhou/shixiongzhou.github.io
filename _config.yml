@@ -1,7 +1,7 @@
 # Site settings
 title: "sxzhou's notebook"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://sxzhou.github.io" # the base hostname & protocol for your site
+url: "https://shixiongzhou.github.io" # the base hostname & protocol for your site
 github_username: sxzhou
 
 timezone: Beijing
@@ -17,5 +17,3 @@ redcarpet:
   extensions: ['fenced_code_blocks', 'tables']
 
 paginate: 20
-
-theme: jekyll-theme-cayman
