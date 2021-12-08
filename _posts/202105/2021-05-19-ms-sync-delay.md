@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Mysql主从同步延迟"
-date:   2021-03-19 10:45:00
+title:  "Mysql主从同步延迟解决方案"
+date:   2021-05-19 10:45:00
 categories: article
 tags: mysql
 author: "sxzhou"
