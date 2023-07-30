@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="876b0eb9-c1b3-42c4-9b9d-3c221e3795d2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/thriftCompiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/202206/2022-06-12-go-basic.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sxzhou.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sxzhou.github.io.iml" afterDir="false" />
+    <list default="true" id="876b0eb9-c1b3-42c4-9b9d-3c221e3795d2" name="Default" comment="add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/202206/2022-06-12-go-basic.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/202206/2022-06-12-go-basic.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -617,7 +615,8 @@
     <MESSAGE value="图床迁移" />
     <MESSAGE value="图床迁移&amp;更新todo" />
     <MESSAGE value="排版调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="排版调整" />
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
