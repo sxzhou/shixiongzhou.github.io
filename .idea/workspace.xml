@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="876b0eb9-c1b3-42c4-9b9d-3c221e3795d2" name="Default" comment="add">
+      <change afterPath="$PROJECT_DIR$/_posts/202206/2022-06-22-go-path.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/202206/2022-06-12-go-basic.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/202206/2022-06-12-go-basic.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/202206/2022-06-12-go-basic.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/202211/2022-11-12-go-basic.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,16 +213,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_posts/202105" />
-      <recent name="$PROJECT_DIR$/_posts/202106" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_posts/202105" />
       <recent name="$PROJECT_DIR$/_posts/202104" />
       <recent name="$PROJECT_DIR$/_posts/202004" />
       <recent name="$PROJECT_DIR$/_posts/202009" />
       <recent name="$PROJECT_DIR$/_posts/202107" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts/202211" />
+      <recent name="$PROJECT_DIR$/_posts/202105" />
+      <recent name="$PROJECT_DIR$/_posts/202106" />
     </key>
   </component>
   <component name="RunManager">
