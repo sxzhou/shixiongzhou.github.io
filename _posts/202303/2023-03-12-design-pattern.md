@@ -59,14 +59,16 @@ author: "sxzhou"
 很多场景下，我们需要在业务流程前后提供一些通用的业务无关的操作，比如日志记录、性能统计、安全控制等，如果是简单的实现，必然导致很多重复代码，这时就需要
 用到拦截器模式，它和面向切面编程思想是相似的，相对于使用常用的代理技术实现的切面编程，拦截器模式更加灵活，命名可以更好的表达前后置处理的含义，添加和删除
 更加灵活，从代码阅读上也更加简单明了。   
-[![pPeGj2Q.png](https://s1.ax1x.com/2023/08/09/pPeGj2Q.png)](https://imgse.com/i/pPeGj2Q)
+[![pPeGj2Q.png](https://s1.ax1x.com/2023/08/09/pPeGj2Q.png)](https://imgse.com/i/pPeGj2Q)   
+
 在拦截器模式中，主要包含以下角色: 
 * TargetInvocation：包含了一组Interceptor和一个Target对象，确保在Target处理请求前后，按照定义顺序调用Interceptor做前置和后置处理。  
 * Target：处理请求的目标接口。  
 * TargetImpl：实现了Target接口的对象。
 * Interceptor：拦截器接口。
-* InterceptorImpl：拦截器实现，用来在Target处理请求前后做切面处理。
-```go
+* InterceptorImpl：拦截器实现，用来在Target处理请求前后做切面处理。  
+
+```java
 public interface Target{
     public Response execute(Request request);
 }
@@ -126,6 +128,7 @@ public class InterceptorDemo {
     }
 }
 ```
+    
 
 **插件模式**   
 在企业级软件系统中，扩展性是一个很重要的考虑点，设计任何功能都要考虑到未来的变化，通常简单的场景下，我们可以考虑使用策略模式，这也是在实际生产
@@ -133,5 +136,5 @@ public class InterceptorDemo {
 变化的部分变成扩展能力，作为一个独立的组件，甚至可以热部署，并且在运行时实现插件的加载和卸载，这样才是真正的即插即用。   
 因此插件模式更多的是一种软件架构的思想，并不是简单的几行代码实现，而是要实现一套完整的插件框架。  
 以下是一些关于插件化的思考及实现：  
-[插件式可扩展架构设计心得](https://zhuanlan.zhihu.com/p/372381276)  
-[Java Plug-in Framework (JPF) Project](https://jpf.sourceforge.net/about.html)
+* [插件式可扩展架构设计心得](https://zhuanlan.zhihu.com/p/372381276)  
+* [Java Plug-in Framework (JPF) Project](https://jpf.sourceforge.net/about.html)
