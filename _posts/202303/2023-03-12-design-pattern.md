@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "从码农到工匠-设计原则与设计模式"
+title:  "设计原则与设计模式扩展篇"
 date:   2023-03-12 22:13:00
 categories: article
 tags: go
@@ -138,3 +138,7 @@ public class InterceptorDemo {
 以下是一些关于插件化的思考及实现：  
 * [插件式可扩展架构设计心得](https://zhuanlan.zhihu.com/p/372381276)  
 * [Java Plug-in Framework (JPF) Project](https://jpf.sourceforge.net/about.html)
+
+
+**管道模式**  
+TODO
