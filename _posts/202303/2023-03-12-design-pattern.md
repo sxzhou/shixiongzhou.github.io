@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "设计原则与设计模式扩展篇"
+title:  "设计原则与设计模式扩展篇WIP"
 date:   2023-03-12 22:13:00
 categories: article
 tags: go
